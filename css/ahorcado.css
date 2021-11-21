@@ -1,0 +1,51 @@
+@import url(base.css);
+
+
+.ahorcado-container{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rebeccapurple;
+    
+}
+
+.ahorcado-container > section{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1em 2em;
+    align-items: center;
+
+}
+
+.ahorcado-container > section > *{
+   margin: 1em 0;
+
+}
+
+
+.ahorcado-container > section > p{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+.ahorcado-container > figure{
+    max-width: 250px;
+    background-color: #eae6e6;
+}
+
+.ahorcado-container img{
+    max-width: 100%;
+}
+
+
+.adivinar{
+    width: 90%;
+    height: 20px;
+    background-color: #fff;
+
+}
+
+input{
+    padding: 1em;
+}
