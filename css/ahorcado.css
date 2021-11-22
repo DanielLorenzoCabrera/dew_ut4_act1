@@ -5,6 +5,7 @@
     display: flex;
     flex-flow: row wrap;
     background-color: rebeccapurple;
+    justify-content: center;
     
 }
 
@@ -13,6 +14,7 @@
     flex-flow: column nowrap;
     padding: 1em 2em;
     align-items: center;
+    
 
 }
 
@@ -49,4 +51,20 @@
 input{
     padding: 1em;
     margin: .8em 0;
+}
+
+input:disabled{
+    background-color: #fff;
+}
+
+.correctas{
+    color: rgb(16, 195, 0);
+}
+
+.incorrectas{
+    color: red;
+}
+
+.adivinar{
+    color: #000;
 }
