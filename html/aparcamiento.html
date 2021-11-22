@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel Lorenzo cabrera">
     <title>Unidad de trabajo 4</title>
-    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/parking.css">
+    <script src="../js/aparcamiento.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -17,6 +18,22 @@
             <a href="vectores.html">Vectores</a>
             <a href="email.html">Email</a>
         </nav>
+        <article class="parking">
+            <h3>Parking Cachibombo</h3>
+            <section>
+                <p>
+                    <label>Entrada</label>
+                    <input type="text" class="fecha" placeholder="fecha /dd/mm/yy">
+                    <input type="text" class="hora" placeholder="12:00 hh:mm">
+                </p>
+                <p>Salida: <span class="salida"></span>  </p>
+                <p>Precio: <span class="precio"></span></p>
+                <div class="botones">
+                    <input type="button" value="calcular">
+                    <input type="button" value="reiniciar">
+                </div>
+            </section>
+        </article>
     </div>
 </body>
 </html>

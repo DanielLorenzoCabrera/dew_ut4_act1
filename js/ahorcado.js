@@ -7,7 +7,7 @@ const partida = {
     errores : 0
 }
 
-const palabras = ["chocolate", "papiroflexia","pasatiempo", "feromonas","sombra", "solsticio", "vacaciones", "desarrollador"];
+const palabras = ["chocolate", "papiroflexia","pasatiempo", "feromonas","sombra", "solsticio", "vacaciones", "desarrollador", "aguacate","Polonio","Armario","servilleta"];
 
 
 
