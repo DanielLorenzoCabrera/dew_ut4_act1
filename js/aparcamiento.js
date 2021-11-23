@@ -31,9 +31,6 @@ function comprobarEntrada(){
     }
     
     calcularPrecio();
-
-
-
 }
 
 function borrarEntrada(){
@@ -57,13 +54,14 @@ function validarFecha(){
         }
     });
     const numerosEnteros = numeros.map(number => parseInt(number));
-    [fecha.day,fecha.month, fecha.year] = numerosEnteros;
+    fecha.day =  numerosEnteros[0];
+    fecha.month = numerosEnteros[1] -1 ;
+    fecha.year = numerosEnteros[2];
 
     if(fecha.day > 0 && fecha.day <= 31 && fecha.month >= 0 && fecha.month <= 11 && fecha.year >= 2020 && fecha.year <= date.getFullYear()){
         return true;
     }
     return false;
-
 }
 
 function validarHora(){
@@ -79,9 +77,33 @@ function validarHora(){
 
 
 function calcularPrecio(){
-    const dateTimeUser = (new Date(fecha.year, fecha.month, fecha.day, fecha.hour, fecha.minutes, 0, 0)).getMilliseconds();
-    const actualDate = Date.now();
-    let rest = actualDate - dateTimeUser;
-    let minutes = Math.floor(rest/60000);
-    console.log(Math.floor(minutes/60))
+    const horas = calcularDiferenciaTiempo();
+    let precio = 0;
+    let horasRestantes = horas;
+    while(horasRestantes > 0){
+        if(horasRestantes/24 > 0){
+            horasRestantes /= 24;
+            precio += 20;
+        }else if(precio > 0){
+            precio += horasRestantes * 1,2;
+            horasRestantes = 0;
+        }else{
+            precio += 1.5 ;
+            horasRestantes--;
+            precio += horasRestantes * 1.2;
+            horasRestantes = 0;
+        }
+    }
+   console.log(precio)
 }
+
+function calcularDiferenciaTiempo(){
+    const dateTimeUser = new Date(fecha.year, fecha.month, fecha.day, fecha.hour, fecha.minutes, 0, 0);
+    const actualDate = Date.now();
+    let rest = actualDate - dateTimeUser; // Diferencia en milisegundos
+    const horas = Math.ceil((Math.floor(rest/60000))/60);
+    return horas
+}
+
+
+

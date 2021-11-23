@@ -28,7 +28,6 @@ function start(){
 function generarPalabra(){
     const randNum =  Math.floor(Math.random() * palabras.length);
     partida.palabra = palabras[randNum];
-    
 }
 
 function mostrarPalabra(){
