@@ -20,7 +20,7 @@ function start(){
     botonReinicio.addEventListener("click", borrarEntrada);
 
 
-    //setInterval(actualizarSalida,1000);
+    setInterval(actualizarSalida,1000);
 }
 
 function comprobarEntrada(){
@@ -34,6 +34,14 @@ function comprobarEntrada(){
 }
 
 function borrarEntrada(){
+    console.log("llega")
+    const fecha = document.querySelector(".fecha");
+    const hora = document.querySelector(".hora");
+    const precio = document.querySelector(".precio");
+
+    fecha.value = "";
+    hora.value = "";
+    precio.innerHTML = "";
 
 }
 
@@ -77,30 +85,33 @@ function validarHora(){
 
 
 function calcularPrecio(){
+    const spanPrecio = document.querySelector(".precio");
     const horas = calcularDiferenciaTiempo();
     let precio = 0;
     let horasRestantes = horas;
     while(horasRestantes > 0){
-        if(horasRestantes/24 > 0){
-            horasRestantes /= 24;
+        if(horasRestantes >= 24){
+            horasRestantes -= 24;
             precio += 20;
-        }else if(precio > 0){
-            precio += horasRestantes * 1,2;
-            horasRestantes = 0;
         }else{
-            precio += 1.5 ;
-            horasRestantes--;
-            precio += horasRestantes * 1.2;
-            horasRestantes = 0;
+            if(precio > 0){
+                precio += horasRestantes * 1.2;
+                horasRestantes = 0;
+            }else{
+                precio += 1.5 ;
+                horasRestantes--;
+                precio += horasRestantes * 1.2;
+                horasRestantes = 0;
+            }
         }
     }
-   console.log(precio)
+   spanPrecio.innerHTML = `${precio.toFixed(2)}€`
 }
 
 function calcularDiferenciaTiempo(){
     const dateTimeUser = new Date(fecha.year, fecha.month, fecha.day, fecha.hour, fecha.minutes, 0, 0);
     const actualDate = Date.now();
-    let rest = actualDate - dateTimeUser; // Diferencia en milisegundos
+    const rest = actualDate - dateTimeUser; // Diferencia en milisegundos
     const horas = Math.ceil((Math.floor(rest/60000))/60);
     return horas
 }

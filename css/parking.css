@@ -1,3 +1,60 @@
 @import url(base.css);
 
 
+p,label{
+    color: #000;
+}
+
+
+.parking {
+    width: 300px;
+    outline: .1em solid #fff;
+    padding: 3em;
+}
+
+.parking > section p{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    
+    
+}
+
+.parking > section p > *{
+    margin: .5em 0;
+    
+    
+}
+
+
+input{
+    padding: 1em;
+    text-align: center;
+    font-family: var(--main-font);
+}
+
+.botones{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.botones input{
+    outline: .1em solid #fff;
+    background-color: transparent;
+    border: 0;
+    
+    margin: 0 .2em;
+    cursor: pointer;
+    
+}
+
+.botones input:hover{
+    background-color: #fff;
+}
+
+
+.salida, .precio {
+    color: #fff;
+}
