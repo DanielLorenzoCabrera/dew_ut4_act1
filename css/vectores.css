@@ -6,7 +6,8 @@ form{
     display: flex;
     flex-flow: column nowrap;
     max-width: 300px;
-    background-color: aliceblue;
+    outline: .1em solid #fff;
+    padding: 2em;
     
 }
  form > *{
@@ -18,3 +19,16 @@ form{
      color: #000;
      text-align: center;
  }
+
+
+ input[type='button']{
+     background-color: transparent;
+     border: 0;
+     outline: .1em solid #fff;
+     cursor: pointer;
+ }
+
+ input[type='button']:hover{
+    background-color: #fff;
+    
+}

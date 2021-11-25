@@ -1,0 +1,29 @@
+@import url(base.css);
+
+form{
+    padding: 2em;
+    text-align: center;
+    outline: .1em solid #fff;
+}
+
+form > *{
+    margin: 1em 0;
+}
+
+input{
+    padding: .5em;
+}
+
+.colorBlack{
+    color: #000;
+}
+
+.colorRed{
+    color: red;
+}
+
+span{
+    color: #383838;;
+}
+
+

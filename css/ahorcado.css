@@ -4,7 +4,7 @@
 .ahorcado-container{
     display: flex;
     flex-flow: row wrap;
-    background-color: rebeccapurple;
+    outline: .1em solid #fff;
     justify-content: center;
     
 }
@@ -51,7 +51,10 @@
 input{
     padding: 1em;
     margin: .8em 0;
+    border: 0;
 }
+
+
 
 input:disabled{
     background-color: #fff;

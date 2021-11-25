@@ -34,7 +34,6 @@ function comprobarEntrada(){
 }
 
 function borrarEntrada(){
-    console.log("llega")
     const fecha = document.querySelector(".fecha");
     const hora = document.querySelector(".hora");
     const precio = document.querySelector(".precio");
