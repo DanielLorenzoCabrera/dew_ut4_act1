@@ -10,7 +10,6 @@ const partida = {
 const palabras = ["chocolate", "papiroflexia","pasatiempo", "feromonas","sombra", "solsticio", "vacaciones", "desarrollador", "aguacate","Polonio","Armario","servilleta"];
 
 
-
 function start(){
     reiniciarValores();
     generarPalabra();
@@ -18,10 +17,6 @@ function start(){
 
     const enviarLetra =  document.querySelector(".letra");
     enviarLetra.addEventListener("keyup", chequearLetra);
-
-    
-
-
 }
 
 
@@ -67,8 +62,6 @@ function buscarLetra(letra){
     actualizarImagen();
     actualizarPalabra();
     chequarEstadoPartida();
-
-
 }
 
 
@@ -83,14 +76,11 @@ function actualizarPuntuacion(){
 function actualizarImagen(){
     const ahorcado = document.querySelector(".ahorcado");
     ahorcado.src = `../ahorcado/${partida.errores}.png`;
-
-
 }
 
 function reiniciarValores(){
     document.querySelector(".correctas").value = "";
     document.querySelector(".incorrectas").value = "";
-
 }
 
 function actualizarPalabra(){

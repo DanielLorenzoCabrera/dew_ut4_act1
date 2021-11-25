@@ -8,7 +8,6 @@ const inputs = {
 }
 
 
-
 document.addEventListener("DOMContentLoaded", ()=>{
 
     inputs.text = document.querySelector("input[name='vector']");
@@ -21,9 +20,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     inputs.orderVector.addEventListener("click", order);
     inputs.reverseOrderVector.addEventListener("click", reverseOrder);
 
-
 });
-
 
 function seeVector(){
     if((inputs.text.value).trim() === ""){
@@ -33,7 +30,6 @@ function seeVector(){
         inputs.result.innerHTML = `[ ${inputs.array} ]`;
     }
 }
-
 
 function inputToArray(){
     const content = (inputs.text.value).split(",");
@@ -84,7 +80,6 @@ function getWords(){
         numbers.reverse();
         words.reverse();
         inputs.result.innerHTML = words.concat(numbers)
-
     }
  }
 

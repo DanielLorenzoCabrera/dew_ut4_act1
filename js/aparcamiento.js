@@ -19,7 +19,6 @@ function start(){
     const botonReinicio =  document.querySelector("input[value='reiniciar']");
     botonReinicio.addEventListener("click", borrarEntrada);
 
-
     setInterval(actualizarSalida,1000);
 }
 
@@ -79,7 +78,6 @@ function validarHora(){
         return false;
     }
     return true;
-
 }
 
 

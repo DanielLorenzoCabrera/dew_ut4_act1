@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", init);
 
-
 function init() {
     let inputMail = document.querySelector('#mail');
     inputMail.addEventListener('blur',validarMail);
