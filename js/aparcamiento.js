@@ -109,9 +109,18 @@ function calcularPrecio(){
 }
 
 function calcularDiferenciaTiempo(){
+    if(fecha.year !== 2021){
+        alert("El año debe de ser el actual");
+        return;
+    }
     const dateTimeUser = new Date(fecha.year, fecha.month, fecha.day, fecha.hour, fecha.minutes, 0, 0);
     const actualDate = Date.now();
+    if(dateTimeUser > actualDate){
+        alert("La fecha de entrada es posterior a la de salida");
+        return;
+    }
     const rest = actualDate - dateTimeUser; // Diferencia en milisegundos
+    
     const horas = Math.ceil((Math.floor(rest/60000))/60);
     return horas
 }

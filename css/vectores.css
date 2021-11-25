@@ -1,0 +1,20 @@
+@import url(base.css);
+
+
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 300px;
+    background-color: aliceblue;
+    
+}
+ form > *{
+     margin: 1em;
+     padding: .3em;
+ }
+
+ form p{
+     color: #000;
+     text-align: center;
+ }
