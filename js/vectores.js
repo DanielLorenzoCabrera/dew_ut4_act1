@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     inputs.seeVector.addEventListener("click", seeVector);
     inputs.orderVector.addEventListener("click", order);
-    inputs.reverseOrderVector.addEventListener("click", seeVector);
+    inputs.reverseOrderVector.addEventListener("click", reverseOrder);
 
 
 });
@@ -45,7 +45,6 @@ function order(){
     if((inputs.text.value).trim() === ""){
         inputs.result.innerHTML = "Introduce valores por favor";
     }else{
-        let result ;
         inputs.array = inputToArray();
         let numbers = getNumbers();
         let words = getWords();
@@ -69,6 +68,24 @@ function getWords(){
          return typeof value[0] === "string" && isNaN(value[0]);
      })
      return words;
+ }
+
+
+
+ function reverseOrder(){
+    if((inputs.text.value).trim() === ""){
+        inputs.result.innerHTML = "Introduce valores por favor";
+    }else{
+        inputs.array = inputToArray();
+        let numbers = getNumbers();
+        let words = getWords();
+        numbers.sort(( a, b) =>{ return a - b })
+        words.sort()
+        numbers.reverse();
+        words.reverse();
+        inputs.result.innerHTML = words.concat(numbers)
+
+    }
  }
 
 
